@@ -4,17 +4,12 @@ import yfinance as yf
 from itertools import combinations
 from datetime import datetime
 from tqdm import tqdm
+import sys
 
-# Light-weight statsmodels imports (safe on Py 3.13)
 from statsmodels.regression.linear_model import OLS
 from statsmodels.tools.tools import add_constant
 from statsmodels.tsa.stattools import adfuller
 
-import pandas as pd
-import yfinance as yf
-import sys
-
-# List of available sectors
 sector_names = [
     'technology', 'healthcare', 'financial-services', 'consumer-cyclical', 
     'industrials', 'communication-services', 'consumer-defensive', 
