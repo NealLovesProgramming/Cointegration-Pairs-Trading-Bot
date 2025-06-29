@@ -1,21 +1,17 @@
 import yfinance as yf
 import matplotlib.pyplot as plt
 
-# ---------------- pair + hedge params ----------------
 s1, s2  = "AMAT", "NXPI"
 beta    = 1.127745
 alpha   = -76.817099
 
-# ------------- download adjusted closes --------------
 raw = yf.download([s1, s2],
                   start="2021-01-01",
                   auto_adjust=True,
-                  progress=False)          # default group_by="column"
+                  progress=False)         
 
-# Slice the 'Close' level -> columns are now the tickers
-prices = raw['Close']                     # <--- key change
+prices = raw['Close']                    
 
-# ------------- build & plot spread -------------------
 spread = prices[s1] - (alpha + beta * prices[s2])
 
 plt.figure(figsize=(12, 5))
