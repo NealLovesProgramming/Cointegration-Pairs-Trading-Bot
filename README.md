@@ -29,10 +29,9 @@ This project implements a **statistical arbitrage trading bot** using **cointegr
 
 ## Backtest Results
 
-- **CAGR**: ~35%  
+- **CAGR**: ~24%  
 - **Sharpe Ratio**: ~1.8  
 - **Max Drawdown**: ~15%  
-- **Live (Paper) Portfolio PnL**: +24% YTD (2025)
 
 ---
 
